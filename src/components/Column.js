@@ -1,6 +1,6 @@
-const Column = ({ tasks, columnId, onDragStart, onDragOver, onDrop, children }) => {
+const Column = ({ tasks, sourceColumn, onDragStart, onDragOver, onDrop, children }) => {
   return (
-    <div className="column" onDragOver={onDragOver} onDrop={e => onDrop(e, columnId)}>
+    <div className="column" onDragOver={onDragOver} onDrop={e => onDrop(e, sourceColumn)}>
       <h3>{children}</h3>
       <div className="column-content">
         <ul>

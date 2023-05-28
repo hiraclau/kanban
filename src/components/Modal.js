@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const Modal = ({ name, children, isOpen, openModal, closeModal }) => {
+const Modal = ({ children, isOpen, closeModal }) => {
   useEffect(() => {
     const handleOutsideClick = event => {
       if (event.target.classList.contains('modal')) {
