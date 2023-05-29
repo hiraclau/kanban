@@ -6,18 +6,18 @@ import useColumn from '../hooks/useColumn';
 import { TaskContext } from '../contexts/TaskContext';
 
 const Board = () => {
-  const { tasks } = useContext(TaskContext);
+  const { tasks, addTask } = useContext(TaskContext);
   const { isOpen, closeModal, openModal } = useModal();
-  const { dragTask, dropTask, addTaskOn, dragTaskOverColumn } = useColumn();
+  const { dragTask, dropTask, dragTaskOver } = useColumn();
 
   const handleOnBlur = event => {
-    addTaskOn(event);
+    addTask(event.target.value);
     closeModal();
   };
 
   const handleOnKeyDown = event => {
     if (event.key === 'Enter') {
-      addTaskOn(event);
+      addTask(event.target.value);
       closeModal();
     }
   };
@@ -32,27 +32,27 @@ const Board = () => {
           tasks={tasks.todo}
           sourceColumn="todo"
           onDragStart={dragTask}
-          onDragOver={dragTaskOverColumn}
+          onDragOver={dragTaskOver}
           onDrop={dropTask}>
-          <i class="ph ph-lightbulb"></i>A fazer
+          <i className="ph ph-lightbulb"></i>A fazer
           <button onClick={openModal}>+</button>
         </Column>
         <Column
           tasks={tasks.doing}
           sourceColumn="doing"
           onDragStart={dragTask}
-          onDragOver={dragTaskOverColumn}
+          onDragOver={dragTaskOver}
           onDrop={dropTask}>
-          <i class="ph ph-arrows-counter-clockwise"></i>
+          <i className="ph ph-arrows-counter-clockwise"></i>
           Fazendo
         </Column>
         <Column
           tasks={tasks.done}
           sourceColumn="done"
           onDragStart={dragTask}
-          onDragOver={dragTaskOverColumn}
+          onDragOver={dragTaskOver}
           onDrop={dropTask}>
-          <i class="ph ph-check"></i>
+          <i className="ph ph-check"></i>
           Feito
         </Column>
       </div>

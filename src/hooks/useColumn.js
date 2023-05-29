@@ -9,7 +9,7 @@ const useColumn = () => {
     setDraggedTask(task);
   };
 
-  const dragTaskOverColumn = event => {
+  const dragTaskOver = event => {
     event.preventDefault();
   };
 
@@ -21,11 +21,7 @@ const useColumn = () => {
     }
   };
 
-  const addTaskOn = event => {
-    addTask(event.target.value);
-  };
-
-  return { dragTask, dropTask, addTaskOn, dragTaskOverColumn };
+  return { dragTask, dropTask, dragTaskOver };
 };
 
 export default useColumn;
