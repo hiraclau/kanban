@@ -1,5 +1,5 @@
 const CACHE_NAME = 'kanban';
-const urlsToCache = ['/', '/index.html', '/favicon.ico', '/logo192.png', '/logo512.png', '/manifest.json'];
+const urlsToCache = ['/'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache)));
