@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-
+import mockData from '../mock/tasks.json';
 export const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
@@ -7,17 +7,7 @@ export const TaskProvider = ({ children }) => {
 
   const [task, setTask] = useState(taskDefault);
 
-  const [tasks, setTasks] = useState([
-    { status: 'todo', title: 'Estudar IA', description: 'Treinar', id: '1' },
-    { status: 'todo', title: 'Ler crime e castigo', description: 'Ler', id: '2' },
-    { status: 'todo', title: 'Aprender fazer dadinho de tapioca', description: 'Ler', id: '3' },
-    { status: 'todo', title: 'Limpar a casa', description: 'Ler', id: '4' },
-    { status: 'todo', title: 'Lavar roupas', description: 'Ler', id: '5' },
-    { status: 'todo', title: 'Consertar filtro', description: 'Ler', id: '6' },
-    { status: 'todo', title: 'Fartlek', description: 'Ler', id: '7' },
-    { status: 'todo', title: 'Aprender Japonês', description: 'Ler', id: '8' },
-    { status: 'todo', title: 'Tomar água', description: 'Ler', id: '9' },
-  ]);
+  const [tasks, setTasks] = useState(mockData);
 
   const newId = () => Math.floor(100000000 + Math.random() * 900000000).toString();
 
@@ -50,26 +40,6 @@ export const TaskProvider = ({ children }) => {
   };
 
   const cleanTask = () => setTask(taskDefault);
-
-  // const [tasks, setTasks] = useState({ todo: [], doing: [], done: [] });
-
-  // const addTask = task => {
-  //   const todo = 'todo';
-  //   const updatedTasks = { ...tasks };
-  //   updatedTasks[todo] = [...updatedTasks[todo], task];
-  //   setTasks(updatedTasks);
-  // };
-
-  // const moveTask = (draggedTask, destinationColumn) => {
-  //   const updatedTasks = { ...tasks };
-  //   const sourceColumn = Object.keys(updatedTasks).find(column => updatedTasks[column].includes(draggedTask));
-
-  //   if (sourceColumn !== destinationColumn) {
-  //     updatedTasks[sourceColumn] = updatedTasks[sourceColumn].filter(task => task !== draggedTask);
-  //     updatedTasks[destinationColumn] = [...updatedTasks[destinationColumn], draggedTask];
-  //     setTasks(updatedTasks);
-  //   }
-  // };
 
   const taskContextValue = {
     tasks,

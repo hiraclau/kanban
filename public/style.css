@@ -50,8 +50,8 @@ ul {
 }
 
 li {
-  width: 10em;
-  height: 10em;
+  width: 12em;
+  height: 12em;
   padding: 1em;
 
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
@@ -65,12 +65,13 @@ li {
 
 li h3 {
   color: #02040f;
-  font-size: 1.6rem;
-  text-align: center;
+  font-size: 1.4rem;
+  text-align: left;
 }
 
 li p {
-  text-align: justify;
+  text-align: left;
+  font-size: 1.2rem;
 }
 
 .column-content {
