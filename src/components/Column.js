@@ -6,7 +6,7 @@ const Column = ({ tasks, sourceColumn, onDragStart, onDragOver, onDrop, children
         <ul>
           {tasks.map((task, index) => (
             <li key={index} draggable onDragStart={e => onDragStart(e, task)}>
-              {task}
+              {task.title} - {task.description}
             </li>
           ))}
         </ul>

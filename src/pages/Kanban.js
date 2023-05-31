@@ -7,38 +7,21 @@ import { TaskContext } from '../contexts/TaskContext';
 
 const Kanban = () => {
   const { tasks, addTask } = useContext(TaskContext);
-  const { isOpen, closeModal, openModal } = useModal();
   const { dragTask, dropTask, dragTaskOver } = useColumn();
-
-  const handleOnBlur = event => {
-    addTask(event.target.value);
-    closeModal();
-  };
-
-  const handleOnKeyDown = event => {
-    if (event.key === 'Enter') {
-      addTask(event.target.value);
-      closeModal();
-    }
-  };
 
   return (
     <>
-      <Modal isOpen={isOpen} closeModal={closeModal} openModal={openModal}>
-        <input type="text" onBlur={handleOnBlur} onKeyDown={handleOnKeyDown} />
-      </Modal>
       <div className="board">
         <Column
-          tasks={tasks.todo}
+          tasks={tasks.filter(task => task.status === 'todo')}
           sourceColumn="todo"
           onDragStart={dragTask}
           onDragOver={dragTaskOver}
           onDrop={dropTask}>
           <i className="ph ph-lightbulb"></i>A fazer
-          <button onClick={openModal}>+</button>
         </Column>
         <Column
-          tasks={tasks.doing}
+          tasks={tasks.filter(task => task.status === 'doing')}
           sourceColumn="doing"
           onDragStart={dragTask}
           onDragOver={dragTaskOver}
@@ -47,7 +30,7 @@ const Kanban = () => {
           Fazendo
         </Column>
         <Column
-          tasks={tasks.done}
+          tasks={tasks.filter(task => task.status === 'done')}
           sourceColumn="done"
           onDragStart={dragTask}
           onDragOver={dragTaskOver}
