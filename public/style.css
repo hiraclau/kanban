@@ -61,9 +61,16 @@ li {
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+li h3 {
+  color: #02040f;
+  font-size: 1.6rem;
   text-align: center;
+}
+
+li p {
+  text-align: justify;
 }
 
 .column-content {
@@ -86,38 +93,6 @@ li {
 
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-/* .modal input {
-  background-color: #fff740;
-
-  width: 10em;
-  height: 10em;
-
-  border: none;
-  outline: none;
-
-  font-size: 1.6rem;
-  font-family: 'Coming Soon', cursive;
-  text-align: center;
-} */
-
-/* .modal button {
-  background-color: #ff65a3;
-  font-family: 'Coming Soon', cursive;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  font-size: 3.2rem;
-  text-align: center;
-  margin-left: 1rem;
-} */
-
-/* .modal button:hover {
-  background-color: #ff7eb9;
-  color: #eee5e9;
-} */
 
 table {
   border-collapse: collapse;

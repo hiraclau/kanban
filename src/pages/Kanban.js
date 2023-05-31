@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react';
 import Column from '../components/Column';
-import Modal from '../components/Modal';
-import useModal from '../hooks/useModal';
 import useColumn from '../hooks/useColumn';
 import { TaskContext } from '../contexts/TaskContext';
+import Header from '../components/Header';
 
 const Kanban = () => {
   const { tasks, addTask } = useContext(TaskContext);
@@ -11,6 +10,7 @@ const Kanban = () => {
 
   return (
     <>
+      <Header page="kanban" />
       <div className="board">
         <Column
           tasks={tasks.filter(task => task.status === 'todo')}
