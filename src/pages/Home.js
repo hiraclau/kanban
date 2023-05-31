@@ -13,6 +13,11 @@ const Home = () => {
   const { task, loadTask, fillTask, cleanTask, addTask, updateTask, deleteTask } = useContext(TaskContext);
   const [edit, setEdit] = useState(false);
 
+  const action = {
+    true: updateTask,
+    false: addTask,
+  };
+
   const handleEditTask = id => {
     setEdit(true);
     loadTask(id);
@@ -22,11 +27,7 @@ const Home = () => {
   const handleSubmit = event => {
     event.preventDefault();
     if (valid()) {
-      if (edit) {
-        updateTask(task);
-      } else {
-        addTask(task);
-      }
+      action[edit](task);
       cleanTask();
       cleanErrors();
       closeModal();
