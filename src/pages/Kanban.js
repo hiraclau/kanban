@@ -5,7 +5,7 @@ import useModal from '../hooks/useModal';
 import useColumn from '../hooks/useColumn';
 import { TaskContext } from '../contexts/TaskContext';
 
-const Board = () => {
+const Kanban = () => {
   const { tasks, addTask } = useContext(TaskContext);
   const { isOpen, closeModal, openModal } = useModal();
   const { dragTask, dropTask, dragTaskOver } = useColumn();
@@ -60,4 +60,4 @@ const Board = () => {
   );
 };
 
-export default Board;
+export default Kanban;

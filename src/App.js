@@ -1,11 +1,11 @@
 import React from 'react';
 import { TaskProvider } from './contexts/TaskContext';
-import Board from './pages/Board';
+import Kanban from './pages/Kanban';
 
 const App = () => {
   return (
     <TaskProvider>
-      <Board />
+      <Kanban />
     </TaskProvider>
   );
 };
