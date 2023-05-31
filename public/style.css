@@ -9,7 +9,7 @@
 
 :root {
   font-size: 62.5%;
-  font-family: 'Coming Soon', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -23,6 +23,7 @@ body {
   flex-direction: row;
   justify-content: center;
   overflow-y: hidden;
+  font-family: 'Coming Soon', cursive;
 }
 
 .column {
@@ -100,7 +101,6 @@ table {
   border-spacing: 0;
   width: 100%;
   border: 1px solid #ddd;
-  font-family: 'Roboto', sans-serif;
 }
 
 th,
@@ -112,55 +112,6 @@ td {
 thead,
 tr:nth-child(even) {
   background: #f2f2f2;
-}
-
-input,
-textarea {
-  all: unset;
-}
-
-form {
-  background: #fff740;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  width: 20em;
-  padding: 1.6rem;
-}
-
-form input {
-  font-size: 3.2rem;
-  text-align: center;
-}
-form textarea {
-  height: 10em;
-}
-
-form button {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  border: none;
-  background: none;
-  color: #02040f;
-  font-size: 3.2rem;
-}
-
-form button:hover {
-  background: none;
-  color: #d62246;
-}
-
-form footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-form span {
-  color: #d62246;
-  font-size: 1rem;
 }
 
 .dashboard footer {
@@ -180,20 +131,6 @@ form span {
   flex-direction: column;
   gap: 2.4rem;
 }
-.dashboard footer button {
-  background-color: #6b818c;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-
-  text-align: center;
-}
-
-.dashboard footer button:hover {
-  background-color: #d8e4ff;
-}
 
 td button {
   background-color: #6b818c;
@@ -204,4 +141,159 @@ td button {
   cursor: pointer;
 
   text-align: center;
+}
+
+td button:hover {
+  background-color: #cdd1c4;
+}
+
+input,
+textarea,
+footer {
+  all: unset;
+}
+form {
+  display: flex;
+  flex-direction: column;
+
+  width: 40rem;
+  max-width: 40rem;
+  background-color: #ffffff;
+  border: 0.1rem solid #374151;
+  padding: 2.4rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input-wrapper label {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.input-wrapper textarea {
+  height: 10rem;
+  max-height: 10rem;
+}
+
+.input-wrapper input,
+textarea {
+  font-size: 1.6rem;
+  background: #ffffff;
+  border: 0.1rem solid #374151;
+  padding: 1.2rem;
+  word-wrap: break-word;
+}
+
+.input-wrapper span {
+  color: #db3a34;
+  font-size: 1.2rem;
+}
+
+form footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+form button {
+  background-color: #5c80bc;
+  width: 100%;
+  height: 3.4rem;
+
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  margin-top: 0.4rem;
+
+  border: none;
+  cursor: pointer;
+
+  border-radius: 0.5rem;
+
+  text-align: center;
+}
+
+form button:hover {
+  background-color: #cdd1c4;
+}
+
+form input:focus,
+textarea:focus {
+  outline: 0.15rem solid #5c80bc;
+}
+
+.dashboard footer button {
+  background-color: #6b818c;
+  width: 3.4rem;
+  height: 3.4rem;
+
+  font-size: 1.6rem;
+
+  margin-top: 0.4rem;
+
+  border: none;
+  cursor: pointer;
+
+  border-radius: 50rem;
+
+  text-align: center;
+}
+
+.dashboard footer button:hover {
+  background-color: #cdd1c4;
+}
+
+#menu {
+  margin: 2.4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+#menu-home {
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+#menu-home button {
+  background: none;
+
+  font-size: 1.6rem;
+
+  margin-top: 0.4rem;
+  border: none;
+  cursor: pointer;
+
+  border-radius: 50rem;
+
+  text-align: center;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: LinkText;
+}
+
+#action {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#edit {
+  background-color: #3e92cc;
+}
+#delete {
+  background-color: #a63a50;
+}
+
+#edit:hover,
+#delete:hover {
+  background-color: #cdd1c4;
 }

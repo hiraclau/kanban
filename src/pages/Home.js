@@ -14,12 +14,19 @@ const Home = () => {
   const { task, loadTask, fillTask, cleanTask, addTask, updateTask, deleteTask } = useContext(TaskContext);
   const [edit, setEdit] = useState(false);
 
+  const status = {
+    todo: 'A fazer',
+    doing: 'Fazendo',
+    done: 'Feito',
+  };
+
   const action = {
     true: updateTask,
     false: addTask,
   };
 
   const handleEditTask = id => {
+    cleanErrors();
     setEdit(true);
     loadTask(id);
     openModal();
@@ -37,30 +44,32 @@ const Home = () => {
 
   return (
     <>
-      <Header page="home" />
+      <Header page="home" openModal={openModal} />
       <div className="dashboard">
         <Modal isOpen={isOpen} closeModal={closeModal} openModal={openModal}>
           <form onSubmit={handleSubmit}>
-            <input type="text" name="title" value={task.title} placeholder="Título" onChange={fillTask} />
-            <span>{errors?.title}</span>
-            <textarea name="description" value={task.description} placeholder="Descrição" onChange={fillTask} />
-            <span>{errors?.description}</span>
-            <footer>
-              <button type="submit">
-                <i className="ph-fill ph-push-pin"></i>
-              </button>
-            </footer>
+            <div className="input-wrapper">
+              <label for="title">Título</label>
+              <input type="text" name="title" value={task.title} onChange={fillTask} />
+              <span>{errors?.title}</span>
+            </div>
+            <div className="input-wrapper">
+              <label for="description">Descrição</label>
+              <textarea name="description" value={task.description} onChange={fillTask} />
+              <span>{errors?.description}</span>
+            </div>
+            <button type="submit">Criar</button>
           </form>
         </Modal>
-        <header>
+        <header id="menu-home">
           <input type="text" value={searchedText} onChange={search} placeholder="Pesquisar por título" />
-          <button onClick={openModal}>Adicionar</button>
         </header>
         <table>
           <thead>
             <tr>
               <th>Título</th>
               <th>Descrição</th>
+              <th>Status</th>
               <th></th>
             </tr>
           </thead>
@@ -69,11 +78,12 @@ const Home = () => {
               <tr key={index}>
                 <td>{task.title}</td>
                 <td>{task.description}</td>
+                <td>{status[task.status]}</td>
                 <td id="action">
-                  <button onClick={() => handleEditTask(task.id)}>
+                  <button id="edit" onClick={() => handleEditTask(task.id)}>
                     <i className="ph-fill ph-pencil"></i>
                   </button>
-                  <button onClick={() => deleteTask(task.id)}>
+                  <button id="delete" onClick={() => deleteTask(task.id)}>
                     <i className="ph-fill ph-trash"></i>
                   </button>
                 </td>

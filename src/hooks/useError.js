@@ -8,7 +8,7 @@ const useError = () => {
   const valid = () => {
     let isValid = true;
     Object.keys(task).forEach(property => {
-      if (task[property].trim() === '') {
+      if (task[property] === '') {
         setErrors(prevState => ({ ...prevState, [property]: 'Preenchimento obrigatório' }));
         isValid = false;
       } else {

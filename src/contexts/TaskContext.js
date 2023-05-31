@@ -36,7 +36,7 @@ export const TaskProvider = ({ children }) => {
   };
   const fillTask = event => {
     const { name, value } = event.target;
-    setTask(prevState => ({ ...prevState, [name]: value }));
+    setTask(prevState => ({ ...prevState, [name]: value.trim() }));
   };
 
   const cleanTask = () => setTask(taskDefault);

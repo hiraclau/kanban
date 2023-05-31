@@ -5,7 +5,7 @@ const usePagination = () => {
   const { tasks } = useContext(TaskContext);
   const [searchedText, setSearchedText] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
+  const itemsPerPage = 10;
   const pages = Math.ceil(tasks.length / itemsPerPage);
 
   const indexOfLastItem = currentPage * itemsPerPage;

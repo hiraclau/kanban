@@ -5,7 +5,7 @@ import { TaskContext } from '../contexts/TaskContext';
 import Header from '../components/Header';
 
 const Kanban = () => {
-  const { tasks, addTask } = useContext(TaskContext);
+  const { tasks } = useContext(TaskContext);
   const { dragTask, dropTask, dragTaskOver } = useColumn();
 
   return (
