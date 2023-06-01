@@ -272,12 +272,6 @@ textarea:focus {
   text-align: center;
 }
 
-a {
-  text-decoration: underline;
-  cursor: pointer;
-  color: LinkText;
-}
-
 #action {
   display: flex;
   flex-direction: row;
@@ -307,13 +301,13 @@ footer {
 footer .social {
   font-size: 2.4rem;
 }
-.social {
+a {
   text-decoration: none;
-
+  cursor: pointer;
   color: #02040f;
 }
 
-.social:hover {
+a:hover {
   color: #3e92cc;
 }
 
