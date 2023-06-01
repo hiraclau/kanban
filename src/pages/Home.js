@@ -53,12 +53,12 @@ const Home = () => {
       <Modal isOpen={isOpen} closeModal={closeModal} openModal={openModal}>
         <form onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <label for="title">Título</label>
+            <label htmlFor="title">Título</label>
             <input type="text" name="title" value={task.title} onChange={fillTask} />
             <span>{errors?.title}</span>
           </div>
           <div className="input-wrapper">
-            <label for="description">Descrição</label>
+            <label htmlFor="description">Descrição</label>
             <textarea name="description" value={task.description} onChange={fillTask} />
             <span>{errors?.description}</span>
           </div>
