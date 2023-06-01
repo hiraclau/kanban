@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import Column from '../components/Column';
 import useColumn from '../hooks/useColumn';
 import { TaskContext } from '../contexts/TaskContext';
