@@ -30,7 +30,7 @@ body {
   border: 1px solid #eee5e9;
   flex: 0 0 none;
   padding: 1em;
-  width: 40em;
+  width: 60rem;
 }
 
 h3 {
@@ -296,6 +296,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin: 2.4rem;
 }
 
 footer .social {
