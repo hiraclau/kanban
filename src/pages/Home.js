@@ -82,9 +82,9 @@ const Home = () => {
           <tbody>
             {data.map((task, index) => (
               <tr key={index}>
-                <td>{task.title}</td>
-                <td>{task.description}</td>
-                <td>{status[task.status]}</td>
+                <td data-label="Título:">{task.title}</td>
+                <td data-label="Descrição:">{task.description}</td>
+                <td data-label="Status:">{status[task.status]}</td>
                 <td id="action">
                   <button id="edit" onClick={() => handleEditTask(task.id)}>
                     <i className="ph-fill ph-pencil"></i>
