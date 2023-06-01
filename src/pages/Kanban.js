@@ -5,7 +5,7 @@ import { TaskContext } from '../contexts/TaskContext';
 import Header from '../components/Header';
 
 const Kanban = () => {
-  const { tasks } = useContext(TaskContext);
+  const { tasksByStatus } = useContext(TaskContext);
   const { dragTask, dropTask, dragTaskOver } = useColumn();
 
   return (
@@ -13,7 +13,7 @@ const Kanban = () => {
       <Header page="kanban" />
       <div className="board">
         <Column
-          tasks={tasks.filter(task => task.status === 'todo')}
+          tasks={tasksByStatus('todo')}
           sourceColumn="todo"
           onDragStart={dragTask}
           onDragOver={dragTaskOver}
@@ -21,7 +21,7 @@ const Kanban = () => {
           <i className="ph ph-lightbulb"></i>A fazer
         </Column>
         <Column
-          tasks={tasks.filter(task => task.status === 'doing')}
+          tasks={tasksByStatus('doing')}
           sourceColumn="doing"
           onDragStart={dragTask}
           onDragOver={dragTaskOver}
@@ -30,7 +30,7 @@ const Kanban = () => {
           Fazendo
         </Column>
         <Column
-          tasks={tasks.filter(task => task.status === 'done')}
+          tasks={tasksByStatus('done')}
           sourceColumn="done"
           onDragStart={dragTask}
           onDragOver={dragTaskOver}

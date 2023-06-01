@@ -41,6 +41,15 @@ export const TaskProvider = ({ children }) => {
 
   const cleanTask = () => setTask(taskDefault);
 
+  const tasksByStatus = status =>
+    tasks
+      .filter(task => task.status === status)
+      .sort((x, y) => {
+        const titleX = x.title.toLowerCase();
+        const titleY = y.title.toLowerCase();
+        return titleX < titleY ? -1 : titleX > titleY ? 1 : 0;
+      });
+
   const taskContextValue = {
     tasks,
     task,
@@ -51,6 +60,7 @@ export const TaskProvider = ({ children }) => {
     loadTask,
     moveTask,
     cleanTask,
+    tasksByStatus,
   };
 
   return <TaskContext.Provider value={taskContextValue}>{children}</TaskContext.Provider>;

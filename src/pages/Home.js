@@ -42,25 +42,31 @@ const Home = () => {
     }
   };
 
+  const handleOpenModal = () => {
+    cleanTask();
+    cleanErrors();
+    openModal();
+  };
+
   return (
     <>
-      <Header page="home" openModal={openModal} />
+      <Modal isOpen={isOpen} closeModal={closeModal} openModal={openModal}>
+        <form onSubmit={handleSubmit}>
+          <div className="input-wrapper">
+            <label for="title">Título</label>
+            <input type="text" name="title" value={task.title} onChange={fillTask} />
+            <span>{errors?.title}</span>
+          </div>
+          <div className="input-wrapper">
+            <label for="description">Descrição</label>
+            <textarea name="description" value={task.description} onChange={fillTask} />
+            <span>{errors?.description}</span>
+          </div>
+          <button type="submit">Criar</button>
+        </form>
+      </Modal>
+      <Header page="home" openModal={handleOpenModal} />
       <div className="dashboard">
-        <Modal isOpen={isOpen} closeModal={closeModal} openModal={openModal}>
-          <form onSubmit={handleSubmit}>
-            <div className="input-wrapper">
-              <label for="title">Título</label>
-              <input type="text" name="title" value={task.title} onChange={fillTask} />
-              <span>{errors?.title}</span>
-            </div>
-            <div className="input-wrapper">
-              <label for="description">Descrição</label>
-              <textarea name="description" value={task.description} onChange={fillTask} />
-              <span>{errors?.description}</span>
-            </div>
-            <button type="submit">Criar</button>
-          </form>
-        </Modal>
         <header id="menu-home">
           <input type="text" value={searchedText} onChange={search} placeholder="Pesquisar por título" />
         </header>
