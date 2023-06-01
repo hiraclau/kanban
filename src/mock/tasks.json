@@ -1,0 +1,248 @@
+[
+  {
+    "id": 12345,
+    "title": "Fazer compras",
+    "description": "Ir ao supermercado e comprar os itens da lista.",
+    "status": "todo"
+  },
+  {
+    "id": 67890,
+    "title": "Limpar a casa",
+    "description": "Limpar todos os cômodos, varrer, passar pano e arrumar a bagunça.",
+    "status": "todo"
+  },
+  {
+    "id": 23456,
+    "title": "Estudar para a prova",
+    "description": "Revisar os capítulos 1 a 5 do livro e resolver os exercícios propostos.",
+    "status": "todo"
+  },
+  {
+    "id": 78901,
+    "title": "Marcar consulta médica",
+    "description": "Ligar para o médico e agendar uma consulta para o dia 15 de junho.",
+    "status": "todo"
+  },
+  {
+    "id": 34567,
+    "title": "Fazer exercícios físicos",
+    "description": "Ir à academia e fazer 30 minutos de esteira seguido de 20 minutos de musculação.",
+    "status": "todo"
+  },
+  {
+    "id": 90123,
+    "title": "Preparar apresentação",
+    "description": "Criar slides e ensaiar a apresentação para a reunião de segunda-feira.",
+    "status": "todo"
+  },
+  {
+    "id": 45678,
+    "title": "Pagar contas",
+    "description": "Realizar o pagamento das contas de água, luz e telefone até o dia 5 de junho.",
+    "status": "todo"
+  },
+  {
+    "id": 1234,
+    "title": "Ler livro",
+    "description": "Ler pelo menos dois capítulos do livro 'A Arte da Guerra'.",
+    "status": "todo"
+  },
+  {
+    "id": 56789,
+    "title": "Enviar relatório",
+    "description": "Finalizar o relatório mensal e enviar por e-mail para o chefe até o dia 10 de junho.",
+    "status": "todo"
+  },
+  {
+    "id": 12346,
+    "title": "Assistir a um filme",
+    "description": "Escolher um filme para assistir no final de semana e preparar a pipoca.",
+    "status": "todo"
+  },
+  {
+    "id": 78902,
+    "title": "Consertar o carro",
+    "description": "Levar o carro à oficina para consertar o pneu furado e fazer a troca de óleo.",
+    "status": "todo"
+  },
+  {
+    "id": 34568,
+    "title": "Organizar a papelada",
+    "description": "Separar e arquivar os documentos importantes em pastas apropriadas.",
+    "status": "todo"
+  },
+  {
+    "id": 90124,
+    "title": "Fazer a declaração de imposto de renda",
+    "description": "Reunir os documentos necessários e preencher a declaração de imposto de renda até o dia 30 de junho.",
+    "status": "todo"
+  },
+  {
+    "id": 45679,
+    "title": "Planejar viagem",
+    "description": "Pesquisar destinos e montar um roteiro para as férias de julho.",
+    "status": "todo"
+  },
+  {
+    "id": 1235,
+    "title": "Resolver problemas no computador",
+    "description": "Identificar e corrigir os erros no sistema operacional do computador.",
+    "status": "todo"
+  },
+  {
+    "id": 56790,
+    "title": "Aprender a cozinhar uma nova receita",
+    "description": "Escolher uma receita, comprar os ingredientes e seguir o passo a passo para preparar o prato.",
+    "status": "todo"
+  },
+  {
+    "id": 12347,
+    "title": "Atualizar currículo",
+    "description": "Adicionar as informações mais recentes no currículo e enviar para possíveis empregadores.",
+    "status": "todo"
+  },
+  {
+    "id": 78903,
+    "title": "Fazer manutenção do jardim",
+    "description": "Podar as plantas, regar o jardim e remover as ervas daninhas.",
+    "status": "todo"
+  },
+  {
+    "id": 34569,
+    "title": "Fazer backup dos arquivos importantes",
+    "description": "Criar uma cópia de segurança dos arquivos essenciais e armazená-los em um dispositivo externo.",
+    "status": "todo"
+  },
+  {
+    "id": 90125,
+    "title": "Estudar um novo idioma",
+    "description": "Dedicar pelo menos 30 minutos diários para estudar vocabulário e praticar a pronúncia.",
+    "status": "todo"
+  },
+  {
+    "id": 45680,
+    "title": "Fazer revisão do carro",
+    "description": "Levar o carro à revisão na concessionária e verificar os níveis de óleo, água e pneus.",
+    "status": "todo"
+  },
+  {
+    "id": 1236,
+    "title": "Comprar presentes de aniversário",
+    "description": "Pesquisar opções de presentes e comprar os itens para os aniversariantes do próximo mês.",
+    "status": "todo"
+  },
+  {
+    "id": 56791,
+    "title": "Organizar o armário",
+    "description": "Arrumar as roupas, separar as que não são mais usadas e doar para instituições de caridade.",
+    "status": "todo"
+  },
+  {
+    "id": 12348,
+    "title": "Fazer uma caminhada",
+    "description": "Dar uma volta no parque e caminhar por pelo menos 30 minutos.",
+    "status": "todo"
+  },
+  {
+    "id": 78904,
+    "title": "Assistir a uma série",
+    "description": "Escolher uma nova série para acompanhar e assistir pelo menos três episódios.",
+    "status": "todo"
+  },
+  {
+    "id": 34570,
+    "title": "Aprender a tocar um instrumento",
+    "description": "Matricular-se em aulas de música e praticar diariamente para aprender a tocar um instrumento.",
+    "status": "todo"
+  },
+  {
+    "id": 90126,
+    "title": "Fazer limpeza no escritório",
+    "description": "Organizar a mesa, limpar o teclado e a tela do computador e jogar fora papéis desnecessários.",
+    "status": "todo"
+  },
+  {
+    "id": 45681,
+    "title": "Fazer um curso online",
+    "description": "Pesquisar por cursos de interesse e matricular-se em um para ampliar os conhecimentos.",
+    "status": "todo"
+  },
+  {
+    "id": 1237,
+    "title": "Renovar a assinatura da academia",
+    "description": "Entrar em contato com a academia e renovar a assinatura para mais um mês.",
+    "status": "todo"
+  },
+  {
+    "id": 56792,
+    "title": "Aprender a fazer uma nova sobremesa",
+    "description": "Procurar por receitas de sobremesas e escolher uma para aprender a fazer.",
+    "status": "todo"
+  },
+  {
+    "id": 12349,
+    "title": "Organizar uma festa de aniversário",
+    "description": "Planejar a festa, fazer a lista de convidados e organizar todos os detalhes.",
+    "status": "todo"
+  },
+  {
+    "id": 78905,
+    "title": "Visitar um museu",
+    "description": "Agendar uma visita a um museu próximo e aproveitar para apreciar as exposições.",
+    "status": "todo"
+  },
+  {
+    "id": 34571,
+    "title": "Fazer doação de roupas",
+    "description": "Separar roupas em bom estado e fazer uma doação para pessoas necessitadas.",
+    "status": "todo"
+  },
+  {
+    "id": 90127,
+    "title": "Experimentar uma nova atividade física",
+    "description": "Pesquisar por atividades diferentes, como pilates ou dança, e fazer uma aula experimental.",
+    "status": "todo"
+  },
+  {
+    "id": 45682,
+    "title": "Montar um quebra-cabeça",
+    "description": "Escolher um quebra-cabeça desafiador e montá-lo em um lugar tranquilo.",
+    "status": "todo"
+  },
+  {
+    "id": 1238,
+    "title": "Fazer uma viagem de um dia",
+    "description": "Planejar uma viagem curta para um lugar próximo e aproveitar o dia conhecendo novos lugares.",
+    "status": "todo"
+  },
+  {
+    "id": 56793,
+    "title": "Organizar as contas pessoais",
+    "description": "Revisar os gastos, pagar as contas pendentes e organizar o orçamento para o próximo mês.",
+    "status": "todo"
+  },
+  {
+    "id": 12350,
+    "title": "Fazer um piquenique",
+    "description": "Preparar alimentos leves e saudáveis e fazer um piquenique em um parque.",
+    "status": "todo"
+  },
+  {
+    "id": 78906,
+    "title": "Escrever um diário",
+    "description": "Dedicar alguns minutos por dia para escrever um diário e registrar os acontecimentos e pensamentos.",
+    "status": "todo"
+  },
+  {
+    "id": 34572,
+    "title": "Fazer a limpeza do computador",
+    "description": "Excluir arquivos desnecessários, fazer uma varredura de vírus e organizar as pastas.",
+    "status": "todo"
+  },
+  {
+    "id": 90128,
+    "title": "Assistir a um show ao vivo",
+    "description": "Procurar por shows na cidade e comprar ingressos para assistir a uma apresentação ao vivo.",
+    "status": "todo"
+  }
+]

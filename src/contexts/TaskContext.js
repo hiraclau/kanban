@@ -1,32 +1,66 @@
 import React, { createContext, useState } from 'react';
-
+import mockData from '../mock/tasks.json';
 export const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
-  const [tasks, setTasks] = useState({ todo: [], doing: [], done: [] });
+  const taskDefault = { status: 'todo', title: '', description: '' };
+
+  const [task, setTask] = useState(taskDefault);
+
+  const [tasks, setTasks] = useState(mockData);
+
+  const newId = () => Math.floor(100000000 + Math.random() * 900000000).toString();
 
   const addTask = task => {
-    const todo = 'todo';
-    const updatedTasks = { ...tasks };
-    updatedTasks[todo] = [...updatedTasks[todo], task];
-    setTasks(updatedTasks);
+    setTasks(prevState => prevState.concat({ ...task, id: newId() }));
+  };
+
+  const updateTask = task => {
+    const filteredTasks = tasks.filter(t => t.id !== task.id);
+    setTasks(filteredTasks.concat(task));
+  };
+
+  const deleteTask = id => {
+    const filteredTasks = tasks.filter(task => task.id !== id);
+    setTasks(filteredTasks);
   };
 
   const moveTask = (draggedTask, destinationColumn) => {
-    const updatedTasks = { ...tasks };
-    const sourceColumn = Object.keys(updatedTasks).find(column => updatedTasks[column].includes(draggedTask));
-
-    if (sourceColumn !== destinationColumn) {
-      updatedTasks[sourceColumn] = updatedTasks[sourceColumn].filter(task => task !== draggedTask);
-      updatedTasks[destinationColumn] = [...updatedTasks[destinationColumn], draggedTask];
-      setTasks(updatedTasks);
-    }
+    const filteredTasks = tasks.filter(task => task.id !== draggedTask.id);
+    draggedTask.status = destinationColumn;
+    setTasks(filteredTasks.concat(draggedTask));
   };
+  const loadTask = id => {
+    const editTask = tasks.find(task => task.id === id);
+    setTask(editTask);
+  };
+  const fillTask = event => {
+    const { name, value } = event.target;
+    setTask(prevState => ({ ...prevState, [name]: value.trim() }));
+  };
+
+  const cleanTask = () => setTask(taskDefault);
+
+  const tasksByStatus = status =>
+    tasks
+      .filter(task => task.status === status)
+      .sort((x, y) => {
+        const titleX = x.title.toLowerCase();
+        const titleY = y.title.toLowerCase();
+        return titleX < titleY ? -1 : titleX > titleY ? 1 : 0;
+      });
 
   const taskContextValue = {
     tasks,
+    task,
     addTask,
+    updateTask,
+    deleteTask,
+    fillTask,
+    loadTask,
     moveTask,
+    cleanTask,
+    tasksByStatus,
   };
 
   return <TaskContext.Provider value={taskContextValue}>{children}</TaskContext.Provider>;
