@@ -18,7 +18,7 @@ const Kanban = () => {
           onDragStart={dragTask}
           onDragOver={dragTaskOver}
           onDrop={dropTask}>
-          <i className="ph ph-lightbulb"></i>A fazer
+          <i className="ph ph-lightbulb"></i> A fazer
         </Column>
         <Column
           tasks={tasksByStatus('doing')}
@@ -26,8 +26,7 @@ const Kanban = () => {
           onDragStart={dragTask}
           onDragOver={dragTaskOver}
           onDrop={dropTask}>
-          <i className="ph ph-arrows-counter-clockwise"></i>
-          Fazendo
+          <i className="ph ph-arrows-counter-clockwise"></i> Fazendo
         </Column>
         <Column
           tasks={tasksByStatus('done')}
@@ -35,8 +34,7 @@ const Kanban = () => {
           onDragStart={dragTask}
           onDragOver={dragTaskOver}
           onDrop={dropTask}>
-          <i className="ph ph-check"></i>
-          Feito
+          <i className="ph ph-check"></i> Feito
         </Column>
       </div>
     </>

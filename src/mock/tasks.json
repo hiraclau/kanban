@@ -141,7 +141,7 @@
     "id": 12348,
     "title": "Fazer uma caminhada",
     "description": "Dar uma volta no parque e caminhar por pelo menos 30 minutos.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 78904,
@@ -177,7 +177,7 @@
     "id": 56792,
     "title": "Aprender a fazer uma nova sobremesa",
     "description": "Procurar por receitas de sobremesas e escolher uma para aprender a fazer.",
-    "status": "todo"
+    "status": "doing"
   },
   {
     "id": 12349,
@@ -219,7 +219,7 @@
     "id": 56793,
     "title": "Organizar as contas pessoais",
     "description": "Revisar os gastos, pagar as contas pendentes e organizar o orçamento para o próximo mês.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 12350,

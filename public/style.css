@@ -17,23 +17,20 @@ body {
 }
 
 .board {
+  font-family: 'Coming Soon', cursive;
   margin: 2.4rem;
   background-color: #383d3b;
-  height: 100vh;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  overflow-y: hidden;
-  font-family: 'Coming Soon', cursive;
+  overflow-x: auto;
 }
 
 .column {
-  border: 1px dashed #eee5e9;
   border-top: none;
   border-bottom: none;
-  width: 40em;
+  border: 1px solid #eee5e9;
+  flex: 0 0 none;
   padding: 1em;
-  flex: 1;
+  width: 40em;
 }
 
 h3 {
@@ -275,12 +272,6 @@ textarea:focus {
   text-align: center;
 }
 
-a {
-  text-decoration: underline;
-  cursor: pointer;
-  color: LinkText;
-}
-
 #action {
   display: flex;
   flex-direction: row;
@@ -310,12 +301,62 @@ footer {
 footer .social {
   font-size: 2.4rem;
 }
-.social {
+a {
   text-decoration: none;
-
+  cursor: pointer;
   color: #02040f;
 }
 
-.social:hover {
+a:hover {
   color: #3e92cc;
+}
+
+@media (max-width: 600px) {
+  .column {
+    min-width: 20em;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  table {
+    width: 85vw;
+  }
+  table thead {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+  }
+
+  table tr {
+    border: 0.25rem solid;
+    display: block;
+    margin-bottom: 0.625em;
+    border-radius: 0.5rem;
+    border-color: #333;
+  }
+
+  table td {
+    display: block;
+    font-size: 0.8em;
+    text-align: left;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    margin-right: 0.3rem;
+  }
+
+  span {
+    display: none;
+  }
+  .btn-all {
+    border: none;
+    border-radius: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    outline: none;
+    color: white;
+  }
 }

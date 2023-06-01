@@ -53,12 +53,12 @@ const Home = () => {
       <Modal isOpen={isOpen} closeModal={closeModal} openModal={openModal}>
         <form onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <label for="title">Título</label>
+            <label htmlFor="title">Título</label>
             <input type="text" name="title" value={task.title} onChange={fillTask} />
             <span>{errors?.title}</span>
           </div>
           <div className="input-wrapper">
-            <label for="description">Descrição</label>
+            <label htmlFor="description">Descrição</label>
             <textarea name="description" value={task.description} onChange={fillTask} />
             <span>{errors?.description}</span>
           </div>
@@ -82,9 +82,9 @@ const Home = () => {
           <tbody>
             {data.map((task, index) => (
               <tr key={index}>
-                <td>{task.title}</td>
-                <td>{task.description}</td>
-                <td>{status[task.status]}</td>
+                <td data-label="Título:">{task.title}</td>
+                <td data-label="Descrição:">{task.description}</td>
+                <td data-label="Status:">{status[task.status]}</td>
                 <td id="action">
                   <button id="edit" onClick={() => handleEditTask(task.id)}>
                     <i className="ph-fill ph-pencil"></i>
