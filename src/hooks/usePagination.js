@@ -17,10 +17,22 @@ const usePagination = () => {
   };
 
   const data = tasks
-    .filter(task => task.title.toLowerCase().includes(searchedText.toLowerCase()))
+    .filter(task =>
+      task.title
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .includes(
+          searchedText
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, ''),
+        ),
+    )
     .sort((x, y) => {
       const titleX = x.title.toLowerCase();
       const titleY = y.title.toLowerCase();
+
       return titleX < titleY ? -1 : titleX > titleY ? 1 : 0;
     })
     .slice(indexOfFirstItem, indexOfLastItem);
