@@ -63,7 +63,7 @@ const Home = () => {
             <textarea name="description" aria-label="description" value={task.description} onChange={fillTask} />
             <span>{errors?.description}</span>
           </div>
-          <button type="submit">{edit ? 'Editar' : 'Criar'}</button>
+          <button type="submit">{edit ? 'Atualizar' : 'Cadastrar'}</button>
         </form>
       </Modal>
       <Header page="home" openModal={handleOpenModal} />

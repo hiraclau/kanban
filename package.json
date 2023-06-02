@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Claudio Hirakawa",
   "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
