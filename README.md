@@ -1,6 +1,8 @@
 # Kanban
 
-Uma aplicação PWA para gerenciar tarefas, que permite adicionar, editar, excluir e pesquisar tarefas, além de visualizar as tarefas no modo kanban, o qual é possível mudar o status da tarefa. A aplicação utiliza Context API para armazenar o estado da tarefa ao criar e editar, e também para guardar o estado das tarefas incluídas.
+Uma aplicação PWA para gerenciar tarefas, que permite adicionar, editar, excluir e pesquisar tarefas, além de visualizar as tarefas no modo kanban, o qual é possível mudar o status da tarefa. 
+
+https://github.com/hiraclau/kanban/assets/579060/ef5a8d39-de96-472f-abf2-d7d4aca93ea4
 
 ## Funcionalidades
 
