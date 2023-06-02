@@ -26,8 +26,8 @@ const Home = () => {
   };
 
   const handleEditTask = id => {
-    cleanErrors();
     setEdit(true);
+    cleanErrors();
     loadTask(id);
     openModal();
   };
@@ -43,6 +43,7 @@ const Home = () => {
   };
 
   const handleOpenModal = () => {
+    setEdit(false);
     cleanTask();
     cleanErrors();
     openModal();
@@ -54,21 +55,27 @@ const Home = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <label htmlFor="title">Título</label>
-            <input type="text" name="title" value={task.title} onChange={fillTask} />
+            <input type="text" name="title" aria-label="title" value={task.title} onChange={fillTask} />
             <span>{errors?.title}</span>
           </div>
           <div className="input-wrapper">
             <label htmlFor="description">Descrição</label>
-            <textarea name="description" value={task.description} onChange={fillTask} />
+            <textarea name="description" aria-label="description" value={task.description} onChange={fillTask} />
             <span>{errors?.description}</span>
           </div>
-          <button type="submit">Criar</button>
+          <button type="submit">{edit ? 'Atualizar' : 'Cadastrar'}</button>
         </form>
       </Modal>
       <Header page="home" openModal={handleOpenModal} />
       <div className="dashboard">
         <header id="menu-home">
-          <input type="text" value={searchedText} onChange={search} placeholder="Pesquisar por título" />
+          <input
+            type="text"
+            value={searchedText}
+            onChange={search}
+            placeholder="Pesquisar por título"
+            aria-label="Username"
+          />
         </header>
         <table>
           <thead>
@@ -86,10 +93,10 @@ const Home = () => {
                 <td data-label="Descrição:">{task.description}</td>
                 <td data-label="Status:">{status[task.status]}</td>
                 <td id="action">
-                  <button id="edit" onClick={() => handleEditTask(task.id)}>
+                  <button aria-label="edit" id="edit" onClick={() => handleEditTask(task.id)}>
                     <i className="ph-fill ph-pencil"></i>
                   </button>
-                  <button id="delete" onClick={() => deleteTask(task.id)}>
+                  <button aria-label="delete" id="delete" onClick={() => deleteTask(task.id)}>
                     <i className="ph-fill ph-trash"></i>
                   </button>
                 </td>
@@ -98,15 +105,19 @@ const Home = () => {
           </tbody>
         </table>
         <footer>
-          <button onClick={firstPage}>1</button>
-          <button onClick={previousPage}>
+          <button aria-label="first-page" onClick={firstPage}>
+            1
+          </button>
+          <button aria-label="previous-page" onClick={previousPage}>
             <i className="ph-fill ph-skip-back"></i>
           </button>
-          {currentPage === 0 ? 1 : currentPage}
-          <button onClick={nextPage}>
+          <span aria-label="current-page">{currentPage === 0 ? 1 : currentPage}</span>
+          <button aria-label="next-page" onClick={nextPage}>
             <i className="ph-fill ph-skip-forward"></i>
           </button>
-          <button onClick={lastPage}>{pages === 0 ? 1 : pages}</button>
+          <button aria-label="last-page" onClick={lastPage}>
+            {pages === 0 ? 1 : pages}
+          </button>
         </footer>
       </div>
     </>
