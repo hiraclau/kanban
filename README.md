@@ -1,6 +1,6 @@
 # Kanban
 
-Uma aplicação PWA para gerenciar tarefas, que permite adicionar, editar, excluir e pesquisar tarefas, além de visualizar as tarefas no modo kanban, o qual é possível mudar o status da tarefa. 
+Uma aplicação PWA para gerenciar tarefas, que permite adicionar, editar, excluir e pesquisar tarefas, além de visualizar as tarefas no modo kanban, o qual é possível mudar o status da tarefa.
 
 https://github.com/hiraclau/kanban/assets/579060/ef5a8d39-de96-472f-abf2-d7d4aca93ea4
 
@@ -96,6 +96,7 @@ kanban/
   .gitignore
   babel.config.js
   jest.config.js
+  LICENSE
   package.json
   README.md
   yarn.lock
